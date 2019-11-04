@@ -1,7 +1,7 @@
 <h2 class="title">{{ title }}</h2>
-<ul>
-    <li *ngFor="let node of nodes">
-        <app-health-node [title]="node.name" [health]="node.health" [nodeKey]="node.key">
+<ul *ngIf="report">
+    <li *ngFor="let node of report.nodes">
+        <app-health-node [health]="node">
 
         </app-health-node>
     </li>

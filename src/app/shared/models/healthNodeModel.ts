@@ -1,10 +1,21 @@
+export interface HealthReport {
+    reportDate: Date;
+    nodes?: HealthResult[];
+}
+
+export interface HealthResult {
+    message?: string;
+    status: string;
+    result?: string;
+    node: HealthNode;
+}
 export interface HealthNode {
     name: string;
     key: string;
-    health: string;
+    url?: string;
 }
 
 export interface HealthNodePanelItem {
     title: string;
-    nodes: HealthNode[];
+    report?: HealthReport;
 }

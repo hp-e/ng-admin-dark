@@ -1,4 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { HealthResult } from '../../models/healthNodeModel';
 
 @Component({
   selector: 'app-health-node',
@@ -8,9 +9,11 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
 })
 export class HealthNodeComponent implements OnInit {
 
-  @Input() title: string;
-  @Input() health: string;
-  @Input() nodeKey: string;
+  @Input() health: HealthResult;
+
+  // @Input() title: string;
+  // @Input() health: string;
+  // @Input() nodeKey: string;
   
   constructor() { }
 

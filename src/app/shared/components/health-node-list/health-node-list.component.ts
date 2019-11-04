@@ -1,6 +1,6 @@
 import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
 import { HealthNodeComponent } from '../health-node/health-node.component';
-import { HealthNode } from '../../models/healthNodeModel';
+import { HealthNode, HealthReport } from '../../models/healthNodeModel';
 
 @Component({
   selector: 'app-health-node-list',
@@ -10,7 +10,7 @@ import { HealthNode } from '../../models/healthNodeModel';
 })
 export class HealthNodeListComponent implements OnInit {
   @Input() title: string;
-  @Input() nodes: HealthNode[] = [];
+  @Input() report: HealthReport;
 
   constructor() { }
 

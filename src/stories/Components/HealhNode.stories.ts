@@ -2,6 +2,16 @@ import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 
 import { HealthNodeComponent } from 'src/app/shared/components/health-node/health-node.component';
+import { HealthResult } from 'src/app/shared/models/healthNodeModel';
+
+let defaultResult: HealthResult = {
+  status: 'Healthy',
+  node: {
+    name: 'Histology Service',
+    key: 'patolab.raw.histology.service',
+    url: 'url'
+  }
+};
 
 export default {
   title: 'Health Node',
@@ -10,9 +20,7 @@ export default {
 export const healthyNode = () => ({
   component: HealthNodeComponent,
   props: {
-    title: 'Histology Service',
-    health: 'Healthy',
-    nodeKey: 'patolab.raw.histology.service'
+    health: {...defaultResult}
   },
 });
 
@@ -22,9 +30,7 @@ healthyNode.story = {
 export const unhealthyNode = () => ({
   component: HealthNodeComponent,
   props: {
-    title: 'Histology Service',
-    health: 'Unhealthy',
-    nodeKey: 'patolab.raw.histology.service'
+    health: {...defaultResult, status: 'Unhealthy'}
   },
 });
 
@@ -35,9 +41,7 @@ unhealthyNode.story = {
 export const degradedNode = () => ({
   component: HealthNodeComponent,
   props: {
-    title: 'Histology Service',
-    health: 'Degraded',
-    nodeKey: 'patolab.raw.histology.service'
+    health: {...defaultResult, status: 'Degraded'}
   },
 });
 
@@ -48,9 +52,7 @@ degradedNode.story = {
 export const systemDown = () => ({
     component: HealthNodeComponent,
     props: {
-      title: 'Histology Service',
-      health: 'SystemDown',
-      nodeKey: 'patolab.raw.histology.service'
+      health: {...defaultResult, status: 'SystemDown'}
     },
   });
   

@@ -1,1 +1,17 @@
-<p>dashboard works!</p>
+<h1 class="page-title">
+    dashboard works!
+</h1>
+<button (click)="startStream()">Start</button>
+<button (click)="stopStream()">Stop</button>
+
+<!-- <app-health-node-list [report]="serviceHealth"></app-health-node-list>     -->
+<pre>
+    {{ serviceHealth | json }}
+</pre>
+<!-- <app-health-node-panel [panels]="healthPanels"></app-health-node-panel> -->
+<!-- <li *ngFor="let panel of healthPanels">
+    {{ panel.title }} 
+    
+
+    
+</li> -->
