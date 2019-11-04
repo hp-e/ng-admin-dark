@@ -1,0 +1,16 @@
+@import '../../../../styles/typography';
+@import '../../../../styles/colors';
+ul {
+    list-style: none;  
+    padding-inline-start: 5px;
+    margin-bottom: 30px;
+}
+ li {
+     min-width: 300px;
+     max-width: 400px;
+ }
+.title {
+    font-size: $title_size;
+    font-family: $title_font;
+    color: rgba($color_text, 0.7);
+}

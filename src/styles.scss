@@ -1,5 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import "styles/typography";
+@import "styles/colors";
+
 body {
-    background: #121212;
+  background: #121212;
+  color: white;
+  text-rendering: optimizeLegibility;
+  //line-height: 1.5;
+//   font-family: "Inconsolata", "monospace";
+//   font-family: "Roboto", sans-serif;
+//   font-family: "Inconsolata", monospace;
+//   font-family: "Montserrat", sans-serif;
+//   font-family: "Karla"; //, sans-serif;
+  font-family: $main_font;
+//   font-family: "Source Code Pro", monospace;
 }

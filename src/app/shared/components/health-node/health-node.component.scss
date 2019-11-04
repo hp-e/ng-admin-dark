@@ -1,0 +1,57 @@
+@import '../../../../styles/colors';
+
+:host {
+    background-color: $color_item_background; 
+    color: rgba($color_text, 0.87);
+}
+
+.node {
+    background-color: $color_item_background;    
+    display: block;
+    //width: 200px;
+    // opacity: 0.3;
+    //color: rgba($color_text, 0.87);
+    margin: 0 20px 10px 0;
+    // margin-bottom: 25px;
+    padding: 5px 10px 5px 10px;
+    height: 55px;
+    &-title {
+        color: rgba($color_text, 0.8);
+        //display: block;
+        margin: 0;
+        font-size: 1rem;
+    }
+    
+    &-key {
+        color: rgba($color_text, 0.3);
+        margin: 0 0 2px 0;
+        font-size: 0.8rem;
+    }
+    &-subtitle {
+        display: block;
+        color: rgba($color_text, 0.4);
+        font-size: 0.9rem;
+
+        &--down {
+            color: rgba($color_down, 1);
+            font-weight: bold;
+        }
+    }
+    &-healthy {
+        border-left:$color_healthy solid $alert_width;
+    }
+
+    &-down {
+        background-color:rgba($color_down, 0.4);
+        border-left: $color_down solid $alert_width;
+        color: $color_text; //rgba($color_down, 1);        
+    }
+
+    &-unhealthy {
+        border-left: $color_unhealthy solid $alert_width;    
+    }
+
+    &-degraded {
+        border-left: $color_degraded solid $alert_width;    
+    }
+}

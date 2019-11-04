@@ -1,0 +1,8 @@
+<h2 class="title">{{ title }}</h2>
+<ul>
+    <li *ngFor="let node of nodes">
+        <app-health-node [title]="node.name" [health]="node.health" [nodeKey]="node.key">
+
+        </app-health-node>
+    </li>
+</ul>
