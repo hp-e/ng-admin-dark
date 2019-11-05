@@ -6,7 +6,7 @@ export interface HealthReport {
 export interface HealthResult {
     message?: string;
     status: string;
-    result?: string;
+    //result?: string;
     node: HealthNode;
 }
 export interface HealthNode {

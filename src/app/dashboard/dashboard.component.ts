@@ -11,15 +11,20 @@ import {
 })
 export class DashboardComponent implements OnInit, OnDestroy {
   private connection: signalR.HubConnection;
+  
+  d = new Date();
 
-  serviceHealth: HealthReport = undefined;
+  serviceHealth: HealthReport = undefined; //{  reportDate: this.d, nodes: [
+  //   { status: "Healthy", node: { key: "key", name: "Name", url: "url"}, message: "message"
+
+  // }]};
   databaseHealth: HealthReport = undefined;
   websiteHealth: HealthReport = undefined;
 
   healthPanels: HealthNodePanelItem[] = [
-    { title: "Services" },
-    { title: "Databases" },
-    { title: "Websites" }
+    { title: "Services", report: this.serviceHealth },
+    { title: "Databases", report: this.databaseHealth },
+    { title: "Websites", report: this.websiteHealth }
   ];
 
   constructor() {}
@@ -46,6 +51,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
       this.connection.invoke("AddToGroup", "website");
 
       this.connection.on("Health", (group, health) => {
+        console.log("*** ", group, health);
         switch (group) {
           case "service":
             this.serviceHealth = health;
@@ -60,6 +66,8 @@ export class DashboardComponent implements OnInit, OnDestroy {
             this.healthPanels[2].report = this.websiteHealth;
             break;
         }
+
+        
       });
     });
   }

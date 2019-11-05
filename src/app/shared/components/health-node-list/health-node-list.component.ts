@@ -6,7 +6,7 @@ import { HealthNode, HealthReport } from '../../models/healthNodeModel';
   selector: 'app-health-node-list',
   templateUrl: './health-node-list.component.html',
   styleUrls: ['./health-node-list.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  //changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HealthNodeListComponent implements OnInit {
   @Input() title: string;

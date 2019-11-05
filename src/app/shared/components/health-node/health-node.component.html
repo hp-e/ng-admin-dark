@@ -2,5 +2,5 @@
     [ngClass]="{'node-healthy': health.status === 'Healthy', 'node-down': health.status === 'SystemDown', 'node-unhealthy': health.status === 'Unhealthy', 'node-degraded': health.status === 'Degraded'}">
     <h3 class="node-title">{{ health?.node?.name }} </h3>    
     <span class="node-key">{{ health?.node?.key }}</span>
-    <span class="node-subtitle" [ngClass]="{'node-subtitle--down': health.status==='SystemDown'}">{{ health?.result }}</span>
+    <span class="node-subtitle" [ngClass]="{'node-subtitle--down': health.status==='SystemDown'}">{{ health?.status }}</span>
 </div>

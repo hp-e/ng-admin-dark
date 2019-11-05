@@ -5,7 +5,7 @@ import { HealthResult } from '../../models/healthNodeModel';
   selector: 'app-health-node',
   templateUrl: './health-node.component.html',
   styleUrls: ['./health-node.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  //changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HealthNodeComponent implements OnInit {
 

@@ -5,7 +5,7 @@ import { HealthNodePanelItem } from '../../models/healthNodeModel';
   selector: 'app-health-node-panel',
   templateUrl: './health-node-panel.component.html',
   styleUrls: ['./health-node-panel.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  //changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HealthNodePanelComponent implements OnInit {
   @Input() title: string;
